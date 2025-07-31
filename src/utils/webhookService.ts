@@ -10,28 +10,37 @@ interface WebhookData {
 }
 
 export const sendToWebhook = async (data: WebhookData): Promise<boolean> => {
-  const webhookUrl = 'https://hook.us2.make.com/ngxktsoxlku65i9e6pceti8xbjj0f4m7';
+  const webhookUrl = 'https://hook.us2.make.com/2zd6obglo94brdjxribo1n1ct3g6j8oi';
   
   try {
+    const payload = {
+      data: data // Wrap the data in a 'data' object for better structure in Make.com
+    };
+
+    console.log('Sending webhook with data:', JSON.stringify(payload, null, 2));
+    
     const response = await fetch(webhookUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Accept': 'application/json',
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(payload),
     });
 
+    const responseText = await response.text();
+    console.log('Webhook response status:', response.status);
+    console.log('Webhook response:', responseText);
+
     if (!response.ok) {
-      const errorText = await response.text();
-      console.error(`Webhook error (${response.status}):`, errorText);
+      console.error(`Webhook error (${response.status}):`, responseText);
       return false;
     }
 
-    console.log('Webhook sent successfully:', data);
+    console.log('Webhook sent successfully');
     return true;
   } catch (error) {
     console.error('Error sending webhook:', error);
-    // Don't throw the error to prevent registration from failing if webhook fails
     return false;
   }
 };
