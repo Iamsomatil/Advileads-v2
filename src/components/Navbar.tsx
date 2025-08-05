@@ -72,7 +72,7 @@ export default function Navbar() {
                 <Zap className="h-6 w-6 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-teal-600 to-teal-700 bg-clip-text text-transparent">
-                Advileads
+                Advitravels
               </span>
             </Link>
           </div>
