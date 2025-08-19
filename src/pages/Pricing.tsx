@@ -18,10 +18,10 @@ export default function Pricing() {
   const { user } = useAuth();
   const [loadingPlan, setLoadingPlan] = useState<string | null>(null);
 
-  // Replace with your real Stripe price IDs
+  // Stripe price IDs
   const priceIds: Record<string, string> = {
-    'Pro Monthly': 'price_1MONTHLY',
-    'Pro Annual': 'price_1ANNUAL',
+    'Pro Monthly': 'price_1RxYzfHHlkfTiEBBu9JPUmUy',
+    'Pro Annual': 'price_1RxZ10HHlkfTiEBBfu6cJ7TD',
   };
 
   const plans = [
@@ -45,7 +45,7 @@ export default function Pricing() {
     },
     {
       name: 'Pro Monthly',
-      price: '$49',
+      price: '$19.99',
       period: 'per month',
       description: 'For growing sales teams',
       features: [
@@ -66,10 +66,10 @@ export default function Pricing() {
     },
     {
       name: 'Pro Annual',
-      price: '$39',
+      price: '$14.99',
       period: 'per month',
-      originalPrice: '$49',
-      description: 'Best value for serious professionals',
+      originalPrice: '$19.99',
+      description: 'Best value - save $60 annually',
       features: [
         'Everything in Pro Monthly',
         '2 months free (20% discount)',
