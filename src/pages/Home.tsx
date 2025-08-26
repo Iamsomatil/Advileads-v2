@@ -15,43 +15,43 @@ export default function Home() {
   const features = [
     {
       icon: Users,
-      title: 'Premium Lead Database',
-      description: 'Access thousands of qualified leads across industries with detailed contact information and company insights.'
+      title: 'High-Quality Trip Requests',
+      description: 'From luxury cruises to family adventures, travelers submit detailed itineraries every day, giving agents real opportunities to serve clients who are eager to book.'
     },
     {
       icon: TrendingUp,
-      title: 'Advanced Filtering',
-      description: 'Filter leads by industry, region, deal size, and status to find your perfect prospects.'
+      title: 'Find Clients Who Match Your Expertise',
+      description: 'Filter requests by destination, budget, style, or trip type so you\'re always connecting with the right travelers for your specialties.'
     },
     {
       icon: MessageCircle,
-      title: 'Exclusive Community',
-      description: 'Connect with fellow sales professionals, share insights, and collaborate on deals.'
+      title: 'Learn, Share, and Grow Together',
+      description: 'Join a thriving network of travel advisors who exchange insights, strategies, and success stories to help one another thrive.'
     },
     {
       icon: Shield,
-      title: 'Verified Contacts',
-      description: 'All leads are verified and regularly updated to ensure accuracy and deliverability.'
+      title: 'Every Request Verified',
+      description: 'No wasted time, no guesswork. Every trip request is screened for authenticity, so you\'re only connecting with genuine travelers.'
     }
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'Sales Director at TechFlow',
-      content: 'Advileads transformed our lead generation process. We closed 3x more deals in the first quarter.',
+      name: 'Maria Lopez',
+      role: 'Luxury Travel Advisor, Miami',
+      content: 'Advitravel has completely reshaped how I connect with clients. Within my first month, I booked triple the number of trips, from honeymoons to group getaways.',
       avatar: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
     },
     {
-      name: 'Mike Chen',
-      role: 'Founder at GreenStart',
-      content: 'The community aspect is incredible. I\'ve made valuable connections that led to partnerships.',
+      name: 'Aisha Patel',
+      role: 'Family Travel Consultant, Chicago',
+      content: 'What I value most is the combination of verified leads and the supportive community. I\'ve grown my bookings and sharpened my expertise by learning from other advisors.',
       avatar: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
     },
     {
-      name: 'Amanda Rodriguez',
-      role: 'VP Sales at RetailInno',
-      content: 'Best investment we made this year. ROI was positive within the first month.',
+      name: 'Jammie Carter',
+      role: 'Cruise Specialist, New York',
+      content: 'The verified requests are a game changer. I no longer chase cold leads — instead, I work with travelers who are serious about planning their dream vacations.',
       avatar: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop'
     }
   ];
@@ -69,15 +69,14 @@ export default function Home() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-              Generate More
+              Where Travelers Discover
               <span className="block bg-gradient-to-r from-teal-600 to-teal-500 bg-clip-text text-transparent">
-                Quality Leads
+                Their Perfect Travel Advisor
               </span>
             </h1>
             
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join thousands of sales professionals who trust Advileads for premium lead generation, 
-              expert insights, and an exclusive community that drives results.
+              Every great journey starts with the right guide. Travelers use Advitravel to find trusted advisors who understand their needs, while agents gain access to verified trip requests and clients ready to book.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -104,11 +103,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Everything you need to
-              <span className="text-teal-600"> close more deals</span>
+              Turn Travel Dreams Into
+              <span className="text-teal-600"> Booked Journeys</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our platform combines cutting-edge lead generation with community insights to supercharge your sales process.
+              Advitravel connects passionate travelers with expert advisors, while giving agents the tools and community to grow their business with confidence.
             </p>
           </div>
           
@@ -133,10 +132,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Trusted by sales teams worldwide
+              Trusted by Travelers. Loved by Agents.
             </h2>
             <p className="text-xl text-gray-600">
-              See what our members are saying about their success with Advileads
+              Our members aren't just booking trips — they're building lasting client relationships and transforming their businesses.
             </p>
           </div>
           
@@ -163,24 +162,47 @@ export default function Home() {
 
       {/* CTA Section */}
       <div className="py-24 bg-gradient-to-r from-teal-500 to-teal-600">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <Zap className="w-16 h-16 text-white mx-auto mb-6" />
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to transform your sales process?
-          </h2>
-          <p className="text-xl text-teal-100 mb-8">
-            Join thousands of sales professionals who are already closing more deals with Advileads.
-          </p>
-          <Link
-            to="/register"
-            className="inline-flex items-center px-8 py-4 text-lg font-semibold text-teal-600 bg-white rounded-xl hover:bg-gray-50 transition-all shadow-xl hover:shadow-2xl hover:scale-105"
-          >
-            Start Your Free Trial
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
-          <p className="text-sm text-teal-200 mt-4">
-            14-day free trial • No credit card required • Cancel anytime
-          </p>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Change the Way You Travel — and the Way You Connect?
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Travelers CTA */}
+            <div className="bg-white p-8 rounded-2xl shadow-xl">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Plan Your Next Adventure</h3>
+              <p className="text-gray-600 mb-6">
+                Tell us where you want to go and the kind of experience you're dreaming of. We'll match you with the perfect travel advisor to bring it to life.
+              </p>
+              <div className="space-y-4 mb-6">
+                {['Destination', 'Travel Dates', 'Travel Style', 'Budget'].map((field) => (
+                  <input
+                    key={field}
+                    type="text"
+                    placeholder={field}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  />
+                ))}
+              </div>
+              <button className="w-full bg-gradient-to-r from-teal-500 to-teal-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-teal-600 hover:to-teal-700 transition-all">
+                Find My Travel Agent
+              </button>
+            </div>
+            
+            {/* Agents CTA */}
+            <div className="bg-teal-700 p-8 rounded-2xl shadow-xl text-white">
+              <h3 className="text-2xl font-bold mb-4">Grow Your Travel Business</h3>
+              <p className="mb-6 text-teal-100">
+                Join today and gain instant access to verified traveler requests and a supportive network of peers. Start your 14-day free trial and connect with clients who are ready to book now.
+              </p>
+              <button className="w-full bg-white text-teal-700 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-all mb-3">
+                Start Free 14-Day Trial
+              </button>
+              <p className="text-sm text-teal-200">$19.99/month after trial. Cancel anytime with no risk.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

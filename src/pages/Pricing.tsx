@@ -134,7 +134,7 @@ export default function Pricing() {
     if (!user?.email) return;
     setLoadingPlan(planName);
     try {
-      if (import.meta.env.MODE === 'development' && !import.meta.env.VITE_STRIPE_PUBLIC_KEY) {
+      if (import.meta.env.MODE === 'development' && !import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY) {
         // In development without Stripe key, show a message instead of redirecting
         alert(`In production, this would redirect to Stripe Checkout for ${planName} (Price ID: ${priceIds[planName]})`);
       } else {
