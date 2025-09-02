@@ -4,6 +4,7 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { LeadsProvider } from './contexts/LeadsContext';
 import { ForumProvider } from './contexts/ForumContext';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import { useTrialManager } from './hooks/useTrialManager';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -17,6 +18,8 @@ import Settings from './pages/Settings';
 import PasswordReset from './pages/PasswordReset';
 import AdminPanel from './pages/AdminPanel';
 import Pricing from './pages/Pricing';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
@@ -51,71 +54,77 @@ function AppContent() {
   useTrialManager(); // Initialize trial management
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-50 flex flex-col">
       <Navbar />
-      <Routes>
-        <Route path="/" element={user ? <Navigate to="/dashboard" /> : <Home />} />
-        <Route path="/login" element={user ? <Navigate to="/dashboard" /> : <Login />} />
-        <Route path="/register" element={user ? <Navigate to="/dashboard" /> : <Register />} />
-        <Route path="/password-reset" element={<PasswordReset />} />
-        <Route path="/pricing" element={<Pricing />} />
-        <Route
-          path="/dashboard"
-          element={
-            <ProtectedRoute>
-              <Dashboard />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/leads"
-          element={
-            <ProtectedRoute>
-              <Leads />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/forum"
-          element={
-            <ProtectedRoute>
-              <Forum />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/forum/:threadId"
-          element={
-            <ProtectedRoute>
-              <ForumThread />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/profile/:userId?"
-          element={
-            <ProtectedRoute>
-              <Profile />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/settings"
-          element={
-            <ProtectedRoute>
-              <Settings />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/admin"
-          element={
-            <AdminRoute>
-              <AdminPanel />
-            </AdminRoute>
-          }
-        />
-      </Routes>
+      <main className="flex-1">
+        <Routes>
+          <Route path="/" element={user ? <Navigate to="/dashboard" /> : <Home />} />
+          <Route path="/login" element={user ? <Navigate to="/dashboard" /> : <Login />} />
+          <Route path="/register" element={user ? <Navigate to="/dashboard" /> : <Register />} />
+          <Route path="/password-reset" element={<PasswordReset />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/leads"
+            element={
+              <ProtectedRoute>
+                <Leads />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/forum"
+            element={
+              <ProtectedRoute>
+                <Forum />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/forum/:threadId"
+            element={
+              <ProtectedRoute>
+                <ForumThread />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profile/:userId?"
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/settings"
+            element={
+              <ProtectedRoute>
+                <Settings />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/*"
+            element={
+              <AdminRoute>
+                <AdminPanel />
+              </AdminRoute>
+            }
+          />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </main>
+      <Footer />
     </div>
   );
 }
